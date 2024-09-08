@@ -18,7 +18,7 @@ except ImportError:
                           QTimer, QSize, QDialog, QIcon, QTableWidget, QTableWidgetItem)
 
 try:
-    from PyQt5.QtWidgets import (QListWidget, QAbstractItemView)
+    from PyQt5.QtWidgets import (QListWidget, QAbstractItemView, QLineEdit)
 except ImportError:
         from PyQt4.QtGui import (QListWidget, QAbstractItemView)
 
