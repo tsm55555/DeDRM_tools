@@ -137,7 +137,11 @@ class SelectionDialog(SizePersistedDialog):
         Method to return the selected books
         '''
         return self.books_table.get_books()
-
+    
+    def filter_books(self, query):
+        query = query.lower()
+        filtered_books = [book for book in self.books if query in book.title.lower() or query in book.author.lower()]
+        self.books_table.populate_table(filtered_books)
 
 class BookListTableWidget(QTableWidget):
 
