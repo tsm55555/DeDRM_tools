@@ -72,6 +72,12 @@ class SelectionDialog(SizePersistedDialog):
         title_layout.addWidget(help_label)
         title_layout.setAlignment(Qt.AlignTop)
 
+        # Add a search bar
+        self.search_bar = QLineEdit(self)
+        self.search_bar.setPlaceholderText(_('Search books...'))
+        self.search_bar.textChanged.connect(self.filter_books)
+        layout.addWidget(self.search_bar)
+
         layout.addSpacing(5)
         main_layout = QHBoxLayout()
         layout.addLayout(main_layout)
